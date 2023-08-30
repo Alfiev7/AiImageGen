@@ -1,5 +1,6 @@
 const apiKey = "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";
 
+
 const maxImages = 4; // Number of images to generate for each prompt
 let selectedImageNumber = null;
 
@@ -40,7 +41,7 @@ async function generateImages(input) {
         const prompt = `${input} ${randomNumber}`;
         // We added random number to prompt to create different results
         const response = await fetch(
-            "https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5",
+            "https://api-inference.huggingface.co/models/prompthero/openjourney",
             {
                 method: "POST",
                 headers: {
